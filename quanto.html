@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivideAí - Matos Tecnologias</title>
+    <link rel="stylesheet" href="quanto.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <div class="logo">💸</div>
+            <h1>DivideAí</h1>
+            <p>Rápido, simples e sem estresse</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label>Valor Total da Conta (R$)</label>
+                <input type="number" id="totalAmount" placeholder="0,00" oninput="calculate()">
+            </div>
+
+            <div class="input-group">
+                <label>Dividir por quantas pessoas?</label>
+                <input type="number" id="people" value="2" min="1" oninput="calculate()">
+            </div>
+
+            <div class="service-tip">
+                <label>Incluir Taxa de Serviço (10%)?</label>
+                <input type="checkbox" id="serviceTax" onchange="calculate()" style="width: 20px; height: 20px; cursor: pointer;">
+            </div>
+
+            <div class="result-box">
+                <small>Cada um paga:</small>
+                <div class="price">R$ <span id="perPerson">0,00</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-m">M</span>
+                <p>Matos Tecnologias</p>
+            </div>
+            <p class="copyright">© 2025 Todos os direitos reservados.</p>
+            <nav class="footer-nav">
+                <a href="../pdf/index.html">FotoPDF</a> | 
+                <a href="../contas/index.html">DivideAí</a> | 
+                <a href="../comida/index.html">OqueEuComo?</a> | 
+                <a href="../cozinha/index.html">QuantoDá</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="quanto.js"></script>
+</body>
+</html>

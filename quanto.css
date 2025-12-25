@@ -1,0 +1,148 @@
+:root {
+    --bg-grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --white: #ffffff;
+    --accent: #00d2ff;
+    --footer-text: #e0e0e0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Essencial para o rodapé ficar embaixo */
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-grad);
+    color: var(--white);
+}
+
+.container { 
+    width: 90%; 
+    max-width: 380px; 
+    text-align: center; 
+    padding-top: 50px;
+    flex-grow: 1; /* Empurra o rodapé para baixo */
+}
+
+.logo { font-size: 3rem; margin-bottom: 10px; }
+
+/* Estilo Glassmorphism do Card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.input-group { text-align: left; margin-bottom: 20px; }
+
+label { 
+    display: block; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 10px; 
+    opacity: 0.8; 
+}
+
+input[type="number"] {
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+.service-tip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.result-box {
+    background: var(--accent);
+    padding: 20px;
+    border-radius: 15px;
+    color: #003b4a;
+    transition: transform 0.3s ease;
+}
+
+.price { font-size: 2.5rem; font-weight: 800; }
+
+/* --- Rodapé Institucional Matos Tecnologias --- */
+.main-footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1); /* Leve fundo para destacar no degradê */
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.brand-m {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+}
+
+.copyright {
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: var(--accent); /* Usando o ciano para combinar com o DivideAí */
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    filter: brightness(1.2);
+}
